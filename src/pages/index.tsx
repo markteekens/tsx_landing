@@ -91,7 +91,7 @@ const Home: NextPage = () => {
                           alt=""
                         />
                         <p className="p-4">
-                          AI has the power to revolutionize our modern world
+                          AI has the power to revolutionize our modern world.
                         </p>
                       </div>
                       <div></div>
