@@ -223,7 +223,7 @@ function Blogs() {
                   {!data ? (
                     <div>
                       <button
-                        className="mt-6 w-full rounded-full border-2 border-blue-500 bg-transparent p-2 font-bold text-blue-500 transition hover:bg-blue-500 hover:text-white"
+                        className="mt-6 w-full rounded-full border-2 border-purple-400 bg-transparent p-2 font-bold text-purple-400 transition hover:bg-purple-400 hover:text-white"
                         onClick={() =>
                           mutate({
                             name: input.name,
@@ -238,7 +238,7 @@ function Blogs() {
                     </div>
                   ) : (
                     <div>
-                      <button className="mt-6 w-full rounded-full border-2 border-blue-500 bg-transparent p-2 font-bold text-blue-500 transition hover:bg-blue-500 hover:text-white">
+                      <button className="mt-6 w-full rounded-full border-2 border-purple-400 bg-transparent p-2 font-bold text-purple-400 transition hover:bg-purple-400 hover:text-white">
                         Verzenden..
                       </button>
                     </div>

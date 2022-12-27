@@ -8,7 +8,7 @@ export const contactRouter = router({
   addContact: publicProcedure
     .input(z.object({ name: z.string(), email: z.string(), telefoon: z.string(), checked: z.boolean()}))
     .mutation(async ({ input }) => {
-      let transporter = nodemailer.createTransport({
+      const transporter = nodemailer.createTransport({
         host: "mail.zxcs.nl",
         port: 465,
         secure: true,
@@ -18,7 +18,7 @@ export const contactRouter = router({
         },
       });
 
-      let info = await transporter.sendMail({
+      const info = await transporter.sendMail({
         from: input.email, // sender address
         to: "mark@rubyfinance.nl", // list of receivers
         subject: `${input.checked ? "TSX Aanvraag, ik wil een offerte" : "TSX Aanvraag, bel mij terug."}`, // Subject line

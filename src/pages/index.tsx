@@ -7,10 +7,17 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
+import Image from "next/image";
 
 const Home: NextPage = () => {
   const { data: sessionData } = useSession();
-
+  const [input, setInput] = useState({
+    name: "",
+    email: "",
+    telefoon: "",
+  });
+  const [isChecked, setIsChecked] = useState<boolean>(false);
+  const { mutate, data, isLoading } = trpc.contact.addContact.useMutation();
   const features = [
     {
       name: "Kwaliteit",
@@ -61,7 +68,7 @@ const Home: NextPage = () => {
               <h2>speelt een cruciale rol bij het</h2>
               <h2 className="flex">
                 vormgeven van onze&nbsp;
-                <p className="text-emerald-500">
+                <p className="text-purple-500">
                   <Typewriter
                     options={{
                       strings: ["skills", "planeet", "interacties", "toekomst"],
@@ -75,7 +82,7 @@ const Home: NextPage = () => {
                 Laat ons uw bedrijf helpen groeien en werk samen met TSX.
               </p>
               <Link href="/contact">
-                <button className=" mt-6 flex rounded-full border bg-orange-400 px-10 py-3 text-base font-semibold text-white no-underline transition hover:border-black hover:bg-white/20 hover:text-black ">
+                <button className=" mt-6 flex rounded-full border border-gray-600 bg-transparent px-10 py-3 text-base font-semibold no-underline transition hover:border-black hover:bg-white/20 hover:text-black ">
                   Vraag offerte aan
                   <svg
                     aria-hidden="true"
@@ -202,6 +209,135 @@ const Home: NextPage = () => {
                         className="rounded-lg bg-gray-100 "
                       />
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="contact" className=" h-full min-h-screen  ">
+              <div className="mt-10 flex flex-col items-center justify-center p-12">
+                <h2 className="text-3xl font-bold">Plan een gesprek,</h2>
+                <h2 className="text-3xl font-bold">wij helpen u verder</h2>
+              </div>
+              <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center">
+                  <div className="hidden lg:-mt-80 lg:flex lg:pr-20">
+                    <Image
+                      src="/realtime.png"
+                      alt="computerscherm"
+                      height={300}
+                      width={300}
+                    />
+                  </div>
+                  <div className="rounded-md shadow-md lg:px-10 lg:py-20">
+                    <div className="">
+                      <div className="flex flex-col">
+                        <label
+                          className="mr-2 mt-2 font-semibold text-gray-500"
+                          htmlFor="name"
+                        >
+                          Naam:
+                        </label>
+                        <input
+                          placeholder="Naam"
+                          className="mt-2 rounded-md border border-gray-200 bg-slate-100 p-2"
+                          onChange={(e) =>
+                            setInput((prev) => ({
+                              ...prev,
+                              name: e.target.value,
+                            }))
+                          }
+                          value={input.name}
+                          required
+                        />
+                      </div>
+                      <div className=" flex flex-col">
+                        <label
+                          className="mr-2 mt-2 font-semibold text-gray-500"
+                          htmlFor="email"
+                        >
+                          Email:
+                        </label>
+                        <input
+                          placeholder="Email"
+                          className="mt-2 rounded-md border border-gray-200 bg-slate-100 p-2"
+                          onChange={(e) =>
+                            setInput((prev) => ({
+                              ...prev,
+                              email: e.target.value,
+                            }))
+                          }
+                          type="email"
+                          value={input.email}
+                          required
+                        />
+                      </div>
+                      <div className=" flex flex-col">
+                        <label
+                          className="mr-2 mt-2  font-semibold text-gray-500"
+                          htmlFor="email"
+                        >
+                          Tel nr:
+                        </label>
+                        <input
+                          placeholder="Telefoon"
+                          className="mt-2 w-80 rounded-md border border-gray-200 bg-slate-100 p-2"
+                          onChange={(e) =>
+                            setInput((prev) => ({
+                              ...prev,
+                              telefoon: e.target.value,
+                            }))
+                          }
+                          type="tel"
+                          value={input.telefoon}
+                          required
+                        />
+                      </div>
+                      <div className="mt-2 p-2">
+                        <div className="flex items-center">
+                          <input
+                            type="checkbox"
+                            onChange={() => setIsChecked(!isChecked)}
+                            checked={isChecked}
+                            className="h-4 w-4 rounded border-gray-300 text-blue-600   "
+                          />
+                          <label className="ml-2 text-sm font-medium text-gray-900 ">
+                            Ja, ik vraag een offerte aan.
+                          </label>
+                        </div>
+                      </div>
+
+                      {!data ? (
+                        <div>
+                          <button
+                            className="mt-6 w-full rounded-full border-2 border-purple-400 bg-transparent p-2 font-bold text-purple-400 transition hover:bg-purple-400 hover:text-white"
+                            onClick={() =>
+                              mutate({
+                                name: input.name,
+                                email: input.email,
+                                checked: isChecked,
+                                telefoon: input.telefoon,
+                              })
+                            }
+                          >
+                            Verstuur
+                          </button>
+                        </div>
+                      ) : (
+                        <div>
+                          <button className="mt-6 w-full rounded-full border-2 border-purple-400 bg-transparent p-2 font-bold text-purple-400 transition hover:bg-purple-400 hover:text-white">
+                            Verzenden..
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  <div className="hidden lg:flex lg:pl-20 lg:pt-80">
+                    <Image
+                      src="/coding.png"
+                      alt="man_achter_laptop"
+                      height={300}
+                      width={300}
+                    />
                   </div>
                 </div>
               </div>
