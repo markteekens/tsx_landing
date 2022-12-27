@@ -42,7 +42,7 @@ function pricing() {
                 </p>
               </div>
               <div className="space-y-3 sm:gap-2 lg:grid lg:grid-cols-2 lg:space-y-0">
-                <div className="mx-auto flex max-w-lg flex-col rounded-lg border border-gray-100 bg-white bg-opacity-60 p-6 text-center text-gray-900 shadow backdrop-blur-sm  xl:p-8">
+                <div className="mx-auto flex max-w-lg flex-col rounded-lg border border-gray-100 bg-white bg-opacity-70 p-6 text-center text-gray-900 shadow backdrop-blur-sm  xl:p-8">
                   <h3 className="mb-4 text-2xl font-semibold">
                     Full stack applicatie
                   </h3>
@@ -167,7 +167,7 @@ function pricing() {
                   </Link>
                 </div>
 
-                <div className="mx-auto flex max-w-lg flex-col rounded-lg border border-gray-100 bg-white bg-opacity-60 p-6 text-center text-gray-900 shadow backdrop-blur-sm  xl:p-8">
+                <div className="mx-auto flex max-w-lg flex-col rounded-lg border border-gray-100 bg-white bg-opacity-70 p-6 text-center text-gray-900 shadow backdrop-blur-sm  xl:p-8">
                   <h3 className="mb-4 text-2xl font-semibold">
                     Landing page/multi page
                   </h3>
