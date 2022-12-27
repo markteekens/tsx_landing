@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import Image from "next/image";
+import { MdChevronRight, MdChevronLeft } from "react-icons/md";
 
 const Home: NextPage = () => {
   const { data: sessionData } = useSession();
@@ -49,6 +50,16 @@ const Home: NextPage = () => {
         "Al onze producten zijn schaalbaar tegen zeer lage kosten voor toekomstige opschalingstoepassingen.",
     },
   ];
+
+  const slideRight = () => {
+    var slider: any = document.getElementById("slider");
+    slider.scrollLeft = slider.scrollLeft - 500;
+  };
+
+  const slideLeft = () => {
+    var slider: any = document.getElementById("slider");
+    slider.scrollLeft = slider.scrollLeft + 500;
+  };
 
   return (
     <>
@@ -158,9 +169,130 @@ const Home: NextPage = () => {
               <div className="mt-48 flex justify-center text-center text-black lg:mt-0">
                 <div className="flex flex-col">
                   <h1 className="text-3xl">Wat wij kunnen bieden...</h1>
+                  <div className="">
+                    <h2 className="mt-4 text-2xl font-normal lg:mt-20">
+                      Cases
+                    </h2>
+                    <div className="mt-4 flex w-screen  items-center">
+                      <div
+                        onClick={slideRight}
+                        className="flex-co flex h-40 cursor-pointer items-center rounded-r-md bg-transparent backdrop-blur-sm"
+                      >
+                        <MdChevronLeft className="text-purple-500" size={40} />
+                      </div>
+                      <div
+                        id="slider"
+                        className="scroll m-auto flex gap-4 overflow-x-scroll scroll-smooth p-2 scrollbar-hide sm:gap-6 lg:gap-20"
+                      >
+                        <Image
+                          src="/deadhabitswebsite.jpg"
+                          alt=""
+                          height={300}
+                          width={320}
+                          className="rounded-lg bg-gray-100 duration-300 ease-in-out hover:scale-105"
+                        />
+                        <Image
+                          src="/markentingwebsite.jpg"
+                          alt=""
+                          height={300}
+                          width={320}
+                          className="rounded-lg bg-gray-100 duration-300 ease-in-out hover:scale-105"
+                        />
+                        <Image
+                          src="/owywebsite.jpg"
+                          alt=""
+                          height={300}
+                          width={320}
+                          className="rounded-lg bg-gray-100 duration-300 ease-in-out hover:scale-105"
+                        />
+                        <Image
+                          src="/rubyplatformwebsite.png"
+                          alt=""
+                          height={300}
+                          width={320}
+                          className="rounded-lg bg-gray-100 duration-300 ease-in-out hover:scale-105"
+                        />
+                        <Image
+                          src="/rubywebsite.jpg"
+                          alt=""
+                          height={300}
+                          width={320}
+                          className="rounded-lg bg-gray-100 duration-300 ease-in-out hover:scale-105"
+                        />
+                        <Image
+                          src="/brandninjawebsite.png"
+                          alt=""
+                          height={300}
+                          width={320}
+                          className="rounded-lg bg-gray-100 duration-300 ease-in-out hover:scale-105"
+                        />
+                        <Image
+                          src="/vetaappwebsite.jpg"
+                          alt=""
+                          height={300}
+                          width={320}
+                          className="rounded-lg bg-gray-100 duration-300 ease-in-out hover:scale-105"
+                        />
+                        <Image
+                          src="/vetawebsite.jpg"
+                          alt=""
+                          height={300}
+                          width={320}
+                          className="rounded-lg bg-gray-100 duration-300 ease-in-out hover:scale-105"
+                        />
+                        <Image
+                          src="/crewstarswebsite.jpg"
+                          alt=""
+                          height={300}
+                          width={320}
+                          className="rounded-lg bg-gray-100 duration-300 ease-in-out hover:scale-105"
+                        />
+                        <Image
+                          src="/ironstoveswebsite.jpg"
+                          alt=""
+                          height={300}
+                          width={320}
+                          className="rounded-lg bg-gray-100 duration-300 ease-in-out hover:scale-105"
+                        />
+                        <Image
+                          src="/metabuddieswebsite.jpg"
+                          alt=""
+                          height={300}
+                          width={320}
+                          className="rounded-lg bg-gray-100 duration-300 ease-in-out hover:scale-105"
+                        />
+                      </div>
+                      <div
+                        onClick={slideLeft}
+                        className=" flex-co flex h-40 cursor-pointer items-center rounded-l-md bg-transparent backdrop-blur-sm"
+                      >
+                        <MdChevronRight className="text-purple-500" size={40} />
+                      </div>
+                    </div>
+                    <Link href="/cases">
+                      <div className="z-20 flex justify-center">
+                        <button className=" mt-10 flex rounded-full border border-gray-600 bg-transparent px-10 py-3 text-base font-semibold no-underline transition hover:border-purple-300 hover:bg-white/20 hover:text-black ">
+                          Bekijk alle Cases
+                          <svg
+                            aria-hidden="true"
+                            className="ml-2 -mr-1 h-5 w-5"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                              clipRule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </Link>
+                  </div>
 
                   <div className="">
-                    <div className="mx-auto -mt-10 grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+                    <div className="mx-auto mt-20 grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
                       <div>
                         <p className="mt-4 flex text-black">
                           <small className="text-5xl font-normal">&quot;</small>
@@ -237,10 +369,11 @@ const Home: NextPage = () => {
                 <div className="flex items-center justify-center">
                   <div className="hidden lg:-mt-80 lg:flex lg:pr-20">
                     <Image
-                      src="/realtime.png"
-                      alt="computerscherm"
-                      height={300}
-                      width={300}
+                      src="/arabianwoman.png"
+                      alt="man_achter_laptop"
+                      height={200}
+                      width={200}
+                      className="rounded-lg bg-gray-100"
                     />
                   </div>
                   <div className="rounded-md shadow-md lg:px-10 lg:py-20">
@@ -324,7 +457,7 @@ const Home: NextPage = () => {
                       {!data ? (
                         <div>
                           <button
-                            className="mt-6 w-full rounded-full border-2 border-purple-400 bg-transparent p-2 font-bold text-purple-400 transition hover:bg-purple-400 hover:text-white"
+                            className="mt-6 w-full rounded-full border-2 border-purple-300 bg-transparent p-2 font-bold text-purple-400 transition hover:bg-purple-300 hover:text-white"
                             onClick={() =>
                               mutate({
                                 name: input.name,
@@ -339,7 +472,10 @@ const Home: NextPage = () => {
                         </div>
                       ) : (
                         <div>
-                          <button className="mt-6 w-full rounded-full border-2 border-purple-400 bg-transparent p-2 font-bold text-purple-400 transition hover:bg-purple-400 hover:text-white">
+                          <button
+                            disabled
+                            className="mt-6 w-full rounded-full border-2 border-purple-200 bg-transparent p-2 font-bold text-purple-200 transition hover:bg-purple-200 hover:text-white"
+                          >
                             Verzenden..
                           </button>
                         </div>
@@ -348,10 +484,11 @@ const Home: NextPage = () => {
                   </div>
                   <div className="hidden lg:flex lg:pl-20 lg:pt-80">
                     <Image
-                      src="/coding.png"
+                      src="/template.png"
                       alt="man_achter_laptop"
-                      height={300}
-                      width={300}
+                      height={250}
+                      width={250}
+                      className="rounded-lg bg-gray-100"
                     />
                   </div>
                 </div>
