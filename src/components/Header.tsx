@@ -4,7 +4,7 @@ import Link from "next/link";
 function Header() {
   const { data: sessionData } = useSession();
   return (
-    <header className="sticky top-0 z-10 flex items-center  justify-between p-2 backdrop-blur-sm">
+    <header className="sticky top-0 z-10 flex items-center  justify-between p-8 backdrop-blur-sm">
       <div className="flex items-center">
         <Link href="/">
           <img

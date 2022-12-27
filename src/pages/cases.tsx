@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { trpc } from "../utils/trpc";
 
-function cases() {
+function Cases() {
   const { mutate: mutate_res, data: data_res } =
     trpc.contact.getCases.useMutation();
 
@@ -84,4 +84,4 @@ function cases() {
   );
 }
 
-export default cases;
+export default Cases;
