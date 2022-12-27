@@ -6,7 +6,7 @@ import Header from "../components/Header";
 import { router } from "../server/trpc/trpc";
 import { trpc } from "../utils/trpc";
 
-function services() {
+function Services() {
   const router = useRouter();
   const [input, setInput] = useState({
     name: "",
@@ -114,4 +114,4 @@ function services() {
   );
 }
 
-export default services;
+export default Services;
