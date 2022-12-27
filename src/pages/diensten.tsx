@@ -6,6 +6,19 @@ import Header from "../components/Header";
 function Services() {
   return (
     <>
+      <Head>
+        <title>TSX Technology Group</title>
+        <meta
+          name="description"
+          content="TSX Technology Group - Software Oplossingen op maat"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta
+          http-equiv="Content-Type"
+          content="text/html; charset=ISO-8859-1"
+        />
+      </Head>
       <div className="h-full min-h-screen bg-[url('https://i.imgur.com/oQq8930.jpg')] bg-cover bg-bottom">
         <Header />
         <div className="m-auto flex w-3/6 flex-col">

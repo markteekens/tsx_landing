@@ -33,10 +33,10 @@ function Blogs() {
   return (
     <>
       <Head>
-        <title>Ruby Finance - blogs over boekhouden en administratie</title>
+        <title>TSX Technology Group - Blogs</title>
         <meta
           name="description"
-          content="Ruby Finance boekhouden en administatie, online boekhouden voor ZZp'ers en eenmanszaken voor een lage prijs en kwaliteit service."
+          content="TSX Technology Group - blogs over tech en software op maat voor uw onderneming of stichting"
         />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta
