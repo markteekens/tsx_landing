@@ -52,12 +52,12 @@ const Home: NextPage = () => {
   ];
 
   const slideRight = () => {
-    var slider: any = document.getElementById("slider");
+    let slider: any = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft - 500;
   };
 
   const slideLeft = () => {
-    var slider: any = document.getElementById("slider");
+    let slider: any = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft + 500;
   };
 
