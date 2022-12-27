@@ -134,10 +134,12 @@ const Home: NextPage = () => {
                     <div className="relative m-8 space-y-4">
                       <div className="flex items-center justify-between space-x-8 rounded-lg bg-white p-5">
                         <div className="t flex font-medium">
-                          <img
+                          <Image
                             className="h-20 w-20 shadow-lg shadow-gray-700"
-                            src="https://i.imgur.com/uzmbDFL.jpg"
+                            src="/ChatGPT.jpg"
                             alt="ChatGPT"
+                            width={50}
+                            height={50}
                           />
                           <p className="p-4">
                             AI heeft de kracht om onze moderne wereld radicaal
@@ -152,10 +154,12 @@ const Home: NextPage = () => {
                             Kan traditionele industrieën en bedrijfsmodellen
                             mogelijk verstoren
                           </p>
-                          <img
+                          <Image
                             className="h-20 w-20 object-fill shadow-lg shadow-gray-700"
-                            src="https://i.imgur.com/Igfises.png"
+                            src="/horse.png"
                             alt="women of TSX"
+                            width={50}
+                            height={50}
                           />
                         </div>
                         <div></div>
@@ -334,25 +338,33 @@ const Home: NextPage = () => {
                         </dl>
                       </div>
                       <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-                        <img
+                        <Image
                           src="https://i.imgur.com/KBOHpfd.jpg"
                           alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
                           className="rounded-lg bg-gray-100"
+                          width={300}
+                          height={300}
                         />
-                        <img
+                        <Image
                           src="https://i.imgur.com/Igfises.png"
                           alt="Top down view of walnut card tray with embedded magnets and card groove."
                           className="rounded-lg bg-gray-100"
+                          width={300}
+                          height={300}
                         />
-                        <img
+                        <Image
                           src="https://i.imgur.com/IDvseNw.jpg"
                           alt="Side of walnut card tray with card groove and recessed card area."
                           className="rounded-lg bg-gray-100"
+                          width={300}
+                          height={300}
                         />
-                        <img
-                          src="https://i.imgur.com/6trH9b3.jpg"
+                        <Image
+                          src="/techy.jpeg"
                           alt="Walnut card tray filled with cards and card angled in dedicated groove."
                           className="rounded-lg bg-gray-100 "
+                          width={300}
+                          height={300}
                         />
                       </div>
                     </div>

@@ -9,7 +9,9 @@
 const config = {
   reactStrictMode: true,
   swcMinify: true,
- 
+  images: {
+    domains: ["i.imgur.com"]
+  },
   i18n: {
     locales: ["en"],
     defaultLocale: "en",
