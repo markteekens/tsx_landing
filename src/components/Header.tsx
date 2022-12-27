@@ -4,7 +4,7 @@ import Link from "next/link";
 function Header() {
   const { data: sessionData } = useSession();
   return (
-    <header className="sticky top-0 flex items-center justify-between  p-2 backdrop-blur-sm">
+    <header className="sticky top-0 z-10 flex items-center  justify-between p-2 backdrop-blur-sm">
       <div className="flex items-center">
         <Link href="/">
           <img
@@ -15,18 +15,29 @@ function Header() {
         </Link>
         <p className="mt-9 ml-2 font-light">Technology Group</p>
       </div>
-      <div className="flex gap-6 text-2xl font-normal">
+      <div className="flex gap-4 text-2xl font-normal">
         <Link href="/">
-          <h2>Home</h2>
+          <h2 className="text-black hover:text-emerald-500">Home</h2>
         </Link>
-        <h2>Contact</h2>
-        <Link href="/services">
-          <h2>Services</h2>
+        <Link href="/blogs">
+          <h2 className="text-black hover:text-emerald-500">Blogs</h2>{" "}
+        </Link>
+        <Link href="/contact">
+          <h2 className="text-black hover:text-emerald-500">Contact</h2>{" "}
+        </Link>
+        <Link href="/diensten">
+          <h2 className="text-black hover:text-emerald-500">Diensten</h2>
         </Link>
 
-        <h2>Future</h2>
-        <h2>Pricing</h2>
-        <h2>Projects</h2>
+        <Link href="/toekomst">
+          <h2 className="text-black hover:text-emerald-500">Toekomst</h2>
+        </Link>
+        <Link href="/prijzen">
+          <h2 className="text-black hover:text-emerald-500">Prijzen</h2>
+        </Link>
+        <Link href="/cases">
+          <h2 className="text-black hover:text-emerald-500">Cases</h2>
+        </Link>
       </div>
       <button
         onClick={sessionData ? () => signOut() : () => signIn()}
@@ -48,7 +59,7 @@ function Header() {
             d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
           ></path>
         </svg>
-        {sessionData ? "Sign out" : "Sign in"} with Google
+        {sessionData ? "Log uit" : "Log in"} met Google
       </button>
     </header>
   );

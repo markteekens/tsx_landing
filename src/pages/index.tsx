@@ -2,46 +2,47 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
-
 import { trpc } from "../utils/trpc";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
+import Typewriter from "typewriter-effect";
 
 const Home: NextPage = () => {
   const { data: sessionData } = useSession();
 
   const features = [
     {
-      name: "Quality",
-      description: "Our delivered products are always good quality.",
+      name: "Kwaliteit",
+      description: "Onze geleverde producten zijn altijd van goede kwaliteit",
     },
     {
       name: "Ui Design",
       description:
-        "We use the latest trending design experience for your application with TailwindCSS",
+        "We gebruiken de nieuwste trending design-ervaring voor uw applicatie met TailwindCSS",
     },
     {
       name: "SEO",
       description:
-        "We make sure that the default seach engine optimalization is the at best possible state at delivery time.",
+        "We zorgen ervoor dat de standaard zoekmachine optimalisatie in de best mogelijke staat is op het moment van oplevering.",
     },
     {
       name: "AI",
       description:
-        "We can intergrate AI in your application to have a better experience for users.",
+        "We kunnen AI integreren in uw applicatie om een ​​betere ervaring voor gebruikers te hebben.",
     },
     {
       name: "Blockchain",
       description:
-        "Blockchain can make your transactions safe with three way bookkeeping, and offers many good products.",
+        "Blockchain kan uw transacties veilig maken met drievoudige boekhouding en biedt veel goede producten.",
     },
     {
-      name: "Scalable",
+      name: "Schaalbaar",
       description:
-        "All our products are scalable at a very low cost for future upscaling applications.",
+        "Al onze producten zijn schaalbaar tegen zeer lage kosten voor toekomstige opschalingstoepassingen.",
     },
   ];
+
   return (
     <>
       <Head>
@@ -52,29 +53,45 @@ const Home: NextPage = () => {
       <div className="h-full min-h-screen bg-[url('https://i.imgur.com/oQq8930.jpg')] bg-cover bg-bottom">
         <Header />
         <main className="">
-          <div className="-mt-20 flex items-center p-4">
-            <div className="ml-4 text-7xl font-medium">
+          <div className="-mt-20 flex items-center justify-between p-4">
+            <div className="ml-4 text-6xl font-medium">
               <h2 className="bg-gradient-to-r from-purple-300 to-transparent">
-                Today&apos;s technology plays
+                De technologie van vandaag
               </h2>
-              <h2>a crucial role in shaping </h2>
-              <h2>the future of the world</h2>
-              <button className=" mt-6 flex rounded-full border bg-black px-10 py-3 text-base font-semibold text-white no-underline transition hover:border-black hover:bg-white/20 hover:text-black ">
-                Contact us
-                <svg
-                  aria-hidden="true"
-                  className="ml-2 -mr-1 h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </button>
+              <h2>speelt een cruciale rol bij het</h2>
+              <h2 className="flex">
+                vormgeven van onze&nbsp;
+                <p className="text-emerald-500">
+                  <Typewriter
+                    options={{
+                      strings: ["skills", "planeet", "interacties", "toekomst"],
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+                </p>
+              </h2>
+              <p className="mt-2 text-base font-normal">
+                Laat ons uw bedrijf helpen groeien en werk samen met TSX.
+              </p>
+              <Link href="/contact">
+                <button className=" mt-6 flex rounded-full border bg-orange-400 px-10 py-3 text-base font-semibold text-white no-underline transition hover:border-black hover:bg-white/20 hover:text-black ">
+                  Vraag offerte aan
+                  <svg
+                    aria-hidden="true"
+                    className="ml-2 -mr-1 h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </Link>
             </div>
             <div>
               <div className="flex min-h-screen items-center justify-center px-16">
@@ -88,10 +105,11 @@ const Home: NextPage = () => {
                         <img
                           className="h-20 w-20 shadow-lg shadow-gray-700"
                           src="https://i.imgur.com/uzmbDFL.jpg"
-                          alt=""
+                          alt="ChatGPT"
                         />
                         <p className="p-4">
-                          AI has the power to revolutionize our modern world.
+                          AI heeft de kracht om onze moderne wereld radicaal te
+                          veranderen.
                         </p>
                       </div>
                       <div></div>
@@ -99,13 +117,13 @@ const Home: NextPage = () => {
                     <div className="flex items-center justify-between space-x-8 rounded-lg bg-white p-5">
                       <div className="t flex font-medium">
                         <p className="p-4">
-                          Could potentially disrupt traditional industries and
-                          business models
+                          Kan traditionele industrieën en bedrijfsmodellen
+                          mogelijk verstoren
                         </p>
                         <img
                           className="h-20 w-20 object-fill shadow-lg shadow-gray-700"
-                          src="https://i.imgur.com/9Kd2dFt.jpg"
-                          alt=""
+                          src="https://i.imgur.com/Igfises.png"
+                          alt="women of TSX"
                         />
                       </div>
                       <div></div>
@@ -118,7 +136,7 @@ const Home: NextPage = () => {
           <div>
             <div className="flex justify-center text-center text-black">
               <div className="flex flex-col">
-                <h1 className="text-3xl">What we can offer...</h1>
+                <h1 className="text-3xl">Wat wij kunnen bieden...</h1>
 
                 <div className="">
                   <div className="mx-auto -mt-10 grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
@@ -126,22 +144,22 @@ const Home: NextPage = () => {
                       <p className="mt-4 flex text-black">
                         <small className="text-5xl font-normal">&quot;</small>
                         <p className="text-2xl font-normal">
-                          We develop tailored{" "}
+                          Wij ontwikkelen op maat gemaakte{" "}
                           <small className="font-bold text-black">
-                            software solutions
+                            software oplossingen
                           </small>{" "}
-                          that meet the specific needs of your business. Our
-                          team can integrate{" "}
+                          die voldoen aan de specifieke behoeften van uw
+                          bedrijf. Ons team kan{" "}
                           <small className="font-bold text-purple-400">
                             artificial intelligence
                           </small>{" "}
-                          into your software to enhance automation and
-                          functionality. And we offer{" "}
+                          integreren in uw software om de automatisering te
+                          verbeteren en functionaliteit. En wij bieden{" "}
                           <small className="mr-1 font-bold text-emerald-500">
-                            integration of blockchain
+                            integratie van blockchain
                           </small>
-                          technology to provide secure and transparent data
-                          management for your business.{" "}
+                          technologie om veilige en transparante gegevens te
+                          verstrekken.{" "}
                         </p>
                         <small className="mt-52 text-5xl">&quot;</small>
                       </p>
@@ -164,24 +182,24 @@ const Home: NextPage = () => {
                     </div>
                     <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
                       <img
-                        src="https://i.imgur.com/uzmbDFL.jpg"
+                        src="https://i.imgur.com/KBOHpfd.jpg"
                         alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
                         className="rounded-lg bg-gray-100"
                       />
                       <img
-                        src="https://i.imgur.com/uzmbDFL.jpg"
+                        src="https://i.imgur.com/Igfises.png"
                         alt="Top down view of walnut card tray with embedded magnets and card groove."
                         className="rounded-lg bg-gray-100"
                       />
                       <img
-                        src="https://i.imgur.com/uzmbDFL.jpg"
+                        src="https://i.imgur.com/IDvseNw.jpg"
                         alt="Side of walnut card tray with card groove and recessed card area."
                         className="rounded-lg bg-gray-100"
                       />
                       <img
-                        src="https://i.imgur.com/uzmbDFL.jpg"
+                        src="https://i.imgur.com/6trH9b3.jpg"
                         alt="Walnut card tray filled with cards and card angled in dedicated groove."
-                        className="rounded-lg bg-gray-100"
+                        className="rounded-lg bg-gray-100 "
                       />
                     </div>
                   </div>

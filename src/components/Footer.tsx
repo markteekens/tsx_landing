@@ -13,31 +13,33 @@ function Footer() {
           />
         </Link>
         <ul className="mb-6 flex flex-wrap items-center text-sm sm:mb-0">
-          <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6 ">
-              Contact
-            </a>
-          </li>
-          <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
-              Services
-            </a>
-          </li>
-          <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6 ">
-              Future
-            </a>
-          </li>
-          <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
-              Pricing
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:underline">
-              Projects
-            </a>
-          </li>
+          <Link href="/contact">
+            <li>
+              <p className="mr-4 hover:underline md:mr-6 ">Contact</p>
+            </li>
+          </Link>
+          <Link href="/diensten">
+            <li>
+              <p className="mr-4 hover:underline md:mr-6">Diensten</p>
+            </li>
+          </Link>
+          <Link href="/toekomst">
+            <li>
+              <p className="mr-4 hover:underline md:mr-6 ">Toekomst</p>
+            </li>
+          </Link>
+
+          <Link href="/prijzen">
+            <li>
+              <p className="mr-4 hover:underline md:mr-6">Prijzen</p>
+            </li>
+          </Link>
+
+          <Link href="/cases">
+            <li>
+              <p className="hover:underline">Cases</p>
+            </li>
+          </Link>
         </ul>
       </div>
       <hr className="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" />

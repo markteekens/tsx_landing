@@ -1,5 +1,6 @@
 import { Head } from "next/document";
 import React from "react";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 function services() {
@@ -9,7 +10,7 @@ function services() {
         <Header />
         <div className="m-auto flex w-3/6 flex-col">
           <h2 className="mt-10 p-4 text-center text-3xl font-normal">
-            Our Services
+            Onze diensten
           </h2>
 
           <p className="mb-3  ">
@@ -40,6 +41,7 @@ function services() {
             support throughout the development process.
           </p>
         </div>
+        <Footer />
       </div>
     </>
   );
