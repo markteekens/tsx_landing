@@ -35,8 +35,8 @@ export const contactRouter = router({
       space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE!,
       accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESTOKEN!
   })
-      return await client?.getEntries().then((response: { items: any; }) => {
+      return await (await client?.getEntries({content_type: "tsxBlog"}).then((response: { items: any; }) => {
       return response.items
-     });
+     }))
   }),
 });
