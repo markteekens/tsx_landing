@@ -248,7 +248,7 @@ const Home: NextPage = () => {
                           className="rounded-lg bg-gray-100 duration-300 ease-in-out hover:scale-105"
                         />
                         <Image
-                          src="/ironstoveswebsite.jpg"
+                          src="/ironstovewebsite.jpg"
                           alt=""
                           height={300}
                           width={320}
