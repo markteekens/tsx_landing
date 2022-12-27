@@ -1,4 +1,4 @@
-import { Head } from "next/document";
+import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import Footer from "../components/Footer";

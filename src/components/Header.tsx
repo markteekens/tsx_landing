@@ -4,7 +4,7 @@ import Link from "next/link";
 function Header() {
   const { data: sessionData } = useSession();
   return (
-    <header className="sticky top-0 z-10 flex items-center  justify-between p-8 backdrop-blur-sm">
+    <header className="sticky top-0 z-10 flex items-center  justify-between p-6 backdrop-blur-sm lg:p-8">
       <div className="flex items-center">
         <Link href="/">
           <img
@@ -15,7 +15,7 @@ function Header() {
         </Link>
         <p className="mt-9 ml-2 font-light">Technology Group</p>
       </div>
-      <div className="flex gap-4 text-2xl font-normal">
+      <div className="hidden gap-4 text-2xl font-normal lg:flex">
         <Link href="/">
           <h2 className="text-black hover:text-emerald-500">Home</h2>
         </Link>
@@ -25,8 +25,26 @@ function Header() {
         <Link href="/contact">
           <h2 className="text-black hover:text-emerald-500">Contact</h2>{" "}
         </Link>
-        <Link href="/diensten">
-          <h2 className="text-black hover:text-emerald-500">Diensten</h2>
+
+        <Link href="/toekomst">
+          <h2 className="text-black hover:text-emerald-500">Toekomst</h2>
+        </Link>
+        <Link href="/prijzen">
+          <h2 className="text-black hover:text-emerald-500">Prijzen</h2>
+        </Link>
+        <Link href="/cases">
+          <h2 className="text-black hover:text-emerald-500">Cases</h2>
+        </Link>
+      </div>
+      <div className="absolute mt-28 -ml-2 flex gap-3 text-center text-lg font-normal lg:hidden">
+        <Link href="/">
+          <h2 className="text-black hover:text-emerald-500">Home</h2>
+        </Link>
+        <Link href="/blogs">
+          <h2 className="text-black hover:text-emerald-500">Blogs</h2>{" "}
+        </Link>
+        <Link href="/contact">
+          <h2 className="text-black hover:text-emerald-500">Contact</h2>{" "}
         </Link>
 
         <Link href="/toekomst">
@@ -42,7 +60,7 @@ function Header() {
       <button
         onClick={sessionData ? () => signOut() : () => signIn()}
         type="button"
-        className="dark:focus:ring-[#4285F4]/55 mr-2 mb-2 inline-flex items-center rounded-lg bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-black/90 focus:outline-none focus:ring-4 focus:ring-[#4285F4]/50"
+        className="dark:focus:ring-[#4285F4]/55 mr-0 mt-6 mb-2 ml-2 inline-flex items-center rounded-lg bg-black px-1 py-2 text-center text-sm font-medium text-white hover:bg-black/90 focus:outline-none focus:ring-4 focus:ring-[#4285F4]/50 lg:mt-0 lg:mr-2 lg:ml-0 lg:px-5"
       >
         <svg
           className="mr-2 -ml-1 h-4 w-4"

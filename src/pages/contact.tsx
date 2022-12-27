@@ -1,4 +1,4 @@
-import { Head } from "next/document";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Footer from "../components/Footer";
@@ -44,7 +44,7 @@ function Services() {
           <h2 className="mt-10 p-4 text-center text-3xl font-normal">
             Laat een specialist u terug bellen
           </h2>
-          <div className="w-3/12 rounded border-2 border-gray-200 bg-white p-10 shadow-lg shadow-purple-300">
+          <div className="w-11/12 rounded border-2 border-gray-200 bg-white p-10 shadow-lg shadow-purple-300 lg:w-3/12">
             <div className=" flex flex-col p-4">
               <label className="mr-2 font-normal" htmlFor="name">
                 Naam:

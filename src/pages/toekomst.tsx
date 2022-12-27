@@ -1,4 +1,4 @@
-import { Head } from "next/document";
+import Head from "next/head";
 import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -21,7 +21,7 @@ function future() {
       </Head>
       <div className="h-full min-h-screen bg-[url('https://i.imgur.com/oQq8930.jpg')] bg-cover bg-bottom">
         <Header />
-        <div className="m-auto flex w-3/6 flex-col">
+        <div className="m-auto flex w-full flex-col lg:w-3/6">
           <h2 className="mt-10 p-4 text-center text-3xl font-normal">
             Onze Toekomst
           </h2>
