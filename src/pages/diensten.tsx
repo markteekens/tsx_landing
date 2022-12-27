@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-function services() {
+function Services() {
   return (
     <>
       <div className="h-full min-h-screen bg-[url('https://i.imgur.com/oQq8930.jpg')] bg-cover bg-bottom">
@@ -47,4 +47,4 @@ function services() {
   );
 }
 
-export default services;
+export default Services;
