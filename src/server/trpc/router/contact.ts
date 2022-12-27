@@ -30,12 +30,21 @@ export const contactRouter = router({
 
      
     }),
-  getItems: publicProcedure.mutation(async ({  }) => {
+  getBlogs: publicProcedure.mutation(async ({  }) => {
     const client = contentful.createClient({
       space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE!,
       accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESTOKEN!
   })
       return await (await client?.getEntries({content_type: "tsxBlog"}).then((response: { items: any; }) => {
+      return response.items
+     }))
+  }),
+  getCases: publicProcedure.mutation(async ({  }) => {
+    const client = contentful.createClient({
+      space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE!,
+      accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESTOKEN!
+  })
+      return await (await client?.getEntries({content_type: "tsxCases"}).then((response: { items: any; }) => {
       return response.items
      }))
   }),

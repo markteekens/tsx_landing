@@ -22,7 +22,7 @@ function BlogId() {
 
   const { mutate, data, isLoading } = trpc.contact.addContact.useMutation();
   const { mutate: mutate_res, data: data_res } =
-    trpc.contact.getItems.useMutation();
+    trpc.contact.getBlogs.useMutation();
 
   useEffect(() => {
     mutate_res();

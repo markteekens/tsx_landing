@@ -24,7 +24,7 @@ function Blogs() {
     access?.scrollIntoView({ behavior: "smooth" });
   }
   const { mutate: mutate_res, data: data_res } =
-    trpc.contact.getItems.useMutation();
+    trpc.contact.getBlogs.useMutation();
 
   useEffect(() => {
     mutate_res();
