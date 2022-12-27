@@ -88,7 +88,7 @@ const Home: NextPage = () => {
                 <h2>speelt een cruciale rol bij het</h2>
                 <h2 className="flex">
                   vormgeven van onze&nbsp;
-                  <p className="text-purple-500">
+                  <p className="bg-gradient-to-r from-transparent to-purple-300 text-purple-900 ">
                     <Typewriter
                       options={{
                         strings: [
