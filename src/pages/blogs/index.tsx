@@ -223,7 +223,7 @@ function Blogs() {
                   {!data ? (
                     <div>
                       <button
-                        className="mt-6 w-full rounded-full border-2 border-purple-400 bg-transparent p-2 font-bold text-purple-400 transition hover:bg-purple-400 hover:text-white"
+                        className="mt-6 w-full rounded-full border-2 border-purple-400 bg-transparent p-2 font-bold text-purple-300 transition hover:bg-purple-400 hover:text-white"
                         onClick={() =>
                           mutate({
                             name: input.name,
