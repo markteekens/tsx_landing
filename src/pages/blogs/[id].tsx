@@ -116,7 +116,7 @@ function BlogId() {
                         />
                       </div>
                       <div className="flex">
-                        <h3 className="mt-2 flex text-xs font-semibold text-[#2C234D] lg:text-2xl">
+                        <h3 className="mt-2 flex truncate text-xs font-semibold text-[#2C234D] lg:text-2xl">
                           {article.fields.title}
                         </h3>
                       </div>

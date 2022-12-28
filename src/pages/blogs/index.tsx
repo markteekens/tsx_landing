@@ -47,9 +47,7 @@ function Blogs() {
       <div className="h-full min-h-screen bg-white text-black">
         <Header />
         <div className="h-full min-h-screen">
-          <div className="flex justify-center">
-            <h1 className="text-4xl font-bold">Blogs</h1>
-          </div>
+          <h2 className="mt-10 p-4 text-center text-3xl font-normal">Blogs</h2>
           <div className="flex justify-center">
             <div className="mt-4 w-5/6 justify-center p-2 lg:mt-7 lg:w-4/6 lg:p-10">
               {data_res?.map((article: any, index: number) => {
@@ -117,7 +115,7 @@ function Blogs() {
                           />
                         </div>
                         <div className="flex">
-                          <h3 className="mt-2 flex text-xs font-semibold text-[#2C234D] lg:text-2xl">
+                          <h3 className="mt-2 flex truncate text-xs font-semibold text-[#2C234D] lg:text-2xl">
                             {article.fields.title}
                           </h3>
                         </div>
